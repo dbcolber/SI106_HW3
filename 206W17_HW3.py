@@ -63,9 +63,9 @@ for line in lines:
         python_course_paths += 1
 
 ## (d) Write Python code to determine how many of these paths describe a Microsoft file (a file that EITHER ends with .docx OR .xlsx, but nothing else counts) where the file name ends in a digit. Save that total in the variable microsoft_files_num.
-    finding_microsoft_files = re.findall("")
-
-
+    finding_microsoft_files = re.findall("\d\.(docx|xlsx)", line)
+    if len(finding_microsoft_files)>0:
+        microsoft_files_num += 1
 
 ## We have provided unit tests in this file. To earn the full 500 points, you'll need to pass all of the tests and will need to have followed the instructions.
 ## Each class of the tests represents one "part" of the homework, and the points for each part are divided approx. equally between each of the tests.
